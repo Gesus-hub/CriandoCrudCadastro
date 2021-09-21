@@ -1,0 +1,89 @@
+<div class="container">
+
+    <div class="row mt-5 d-flex justify-content-center">
+
+      <div class="col-md-4 p-0 align-items-center">
+        <form class="row g-3">
+
+            <div class="col-md-6">
+              <label for="inputNome" class="form-label">Nome</label>
+              <input [(ngModel)]="postagem.nome" type="text" class="form-control" id="inputNome" name="inputNome">
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputIdade" class="form-label">Idade</label>
+              <input [(ngModel)]='postagem.idade' type="text" class="form-control" id="inputIdade" name="inputIdade">
+            </div>
+
+            <div class="col-12">
+              <label for="inputProfissao" class="form-label">Profissao</label>
+              <input [(ngModel)]='postagem.profissao' type="text" class="form-control" id="inputProfissao" name="inputProfissao">
+            </div>
+
+            <div class="col-12">
+              <label for="inputEvento" class="form-label">Evento</label>
+              <input [(ngModel)]='postagem.nomeEvento' type="text" class="form-control" id="inputEvento" name="inputEvento">
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputPremio1" class="form-label">Premio 1</label>
+              <input [(ngModel)]='postagem.premio1' type="text" class="form-control" id="inputPremio1" name="inputPremio1">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputPremio2" class="form-label">Premio 2</label>
+                <input [(ngModel)]='postagem.premio2' type="text" class="form-control" id="inputPremio2" name="inputPremio2"> 
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputPremio3" class="form-label">Premio 3</label>
+                <input [(ngModel)]='postagem.premio3' type="text" class="form-control" id="inputPremio3" name="inputPremio3">
+            </div>
+            
+            
+            <div class="col-12">
+              <button (click)='cadastrar()' type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+
+          </form>
+      </div>
+
+    </div>
+
+</div>    
+
+<div class="container mb-5 mt-5">
+
+  <table class="table">
+    <thead>
+      <tr>
+
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Profissao</th>
+        <th scope="col">Nome do Evento</th>
+        <th scope="col">Premio 1</th>
+        <th scope="col">Premio 2</th>
+        <th scope="col">Premio 3</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listaPostagem">
+
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.nome}}</td>
+        <td>{{item.idade}}</td>
+        <td>{{item.profissao}}</td>
+        <td>{{item.nomeEvento}}</td>
+        <td>{{item.premio1}}</td>
+        <td>{{item.premio2}}</td>
+        <td>{{item.premio3}}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,8 @@
+.linha {
+position: absolute;
+width: 31px;
+height: 0px;
+
+border: 1px solid #FFFFFF;
+transform: rotate(90deg);
+}
